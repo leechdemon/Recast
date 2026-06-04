@@ -1155,6 +1155,10 @@ function Recast_Settings_ListingAttributes_CreateFieldGroups() {
 				}
 			}
 
+			// Test( $fieldType );
+			if( $fieldType == 'select' ) { array_unshift( $choices, '--- Select ---' ); }
+			// if( $fieldType == 'select' ) { array_unshift( $choices, '--- Select '.$tax['title'].'---' ); }
+
 			$field = array(
 				'key' => $tax['taxonomy'],
 				'label' => $tax['title'],
